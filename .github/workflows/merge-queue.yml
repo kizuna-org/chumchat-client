@@ -1,0 +1,31 @@
+name: Merge queue CI
+on:
+  merge_group:
+jobs:
+  all-status-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs:
+      - build-test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all-status-check
+        run: |
+          diff \
+            <(yq ".jobs | del(.all-status-check) | keys.[]" .github/workflows/merge-queue.yml) \
+            <(yq ".jobs.all-status-check.needs.[]" .github/workflows/merge-queue.yml)
+
+  build-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shiron-dev/actions/setup-node@eebb6216252466a58fb3aeeb2007cf8c43be1418 # v1.2.1
+      - name: Run install
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm install -g eas-cli
+      - name: Run build
+        run: eas build --platform android --local
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
