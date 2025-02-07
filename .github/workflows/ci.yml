@@ -42,7 +42,7 @@ jobs:
 
   build-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: shiron-dev/actions/setup-node@eebb6216252466a58fb3aeeb2007cf8c43be1418 # v1.2.1
