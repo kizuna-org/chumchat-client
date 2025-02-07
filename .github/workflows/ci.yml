@@ -68,6 +68,7 @@ jobs:
         run: |
           set -x
           pnpm run typecheck
+          ls -l *
 
   lint-test:
     runs-on: ubuntu-latest
