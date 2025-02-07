@@ -8,9 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     needs:
-      - yaml-lint
       - action-lint
+      - yaml-lint
       - build-test
+      - type-test
+      - lint-test
+      - jest-test
     steps:
       - uses: actions/checkout@v4
       - name: Check all-status-check
