@@ -61,6 +61,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: shiron-dev/actions/setup-node@eebb6216252466a58fb3aeeb2007cf8c43be1418 # v1.2.1
+        with:
+          pnpm-version: 9.15.3
       - name: Run install
         run: |
           pnpm install --frozen-lockfile
