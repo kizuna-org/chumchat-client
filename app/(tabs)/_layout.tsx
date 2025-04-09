@@ -8,7 +8,13 @@ import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
-export default function TabLayout() {
+import storybook from "../../.storybook"
+
+export default process.env.EXPO_PUBLIC_STORYBOOK_ENABLED
+  ? storybook
+  : TabLayout;
+
+function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
