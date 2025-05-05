@@ -27,7 +27,7 @@ importers:
         specifier: ~17.1.5
         version: 17.1.5(expo@52.0.46(@babel/core@7.27.1)(@babel/preset-env@7.26.7(@babel/core@7.27.1))(@expo/metro-runtime@4.0.1(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1)))(react-native-webview@13.13.5(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1))(react@18.3.1))(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1))(react@18.3.1))(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1))
       expo-font:
-        specifier: ~13.3.0
+        specifier: ~13.3.1
         version: 13.3.1(expo@52.0.46(@babel/core@7.27.1)(@babel/preset-env@7.26.7(@babel/core@7.27.1))(@expo/metro-runtime@4.0.1(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1)))(react-native-webview@13.13.5(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1))(react@18.3.1))(react-native@0.79.2(@babel/core@7.27.1)(@types/react@18.3.20)(react@18.3.1))(react@18.3.1))(react@18.3.1)
       expo-haptics:
         specifier: ~14.1.4
